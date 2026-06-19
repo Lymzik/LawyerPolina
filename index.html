@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дударькова Полина — семейный юрист в Томске</title>
+  <meta name="description" content="Семейный юрист в Томске. Разводы, раздел имущества, алименты, жилищные споры, трудовые конфликты. Опыт работы внутри судебной системы. Консультация онлайн и офлайн." />
+  <meta name="keywords" content="семейный юрист Томск, юрист по разделу имущества Томск, консультация юриста гражданское право, бракоразводный процесс адвокат, развод юрист Томск, алименты юрист" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a3a5c;
+      --navy-light: #2a5080;
+      --beige: #f5f0e8;
+      --beige-dark: #e8e0cc;
+      --gold: #c9a84c;
+      --gold-light: #e8d08a;
+      --white: #ffffff;
+      --gray-light: #f7f7f7;
+      --gray: #6b7280;
+      --text: #1f2937;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(26, 58, 92, 0.10);
+      --shadow-lg: 0 8px 40px rgba(26, 58, 92, 0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(26,58,92,0.08);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 24px;
+      padding: 8px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--navy-light); transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      padding-top: 60px;
+      background: linear-gradient(145deg, var(--navy) 0%, #0f2340 100%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.12) 0%, transparent 60%);
+    }
+    .hero-content {
+      padding: 60px 48px 60px 64px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 0.3px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 50px);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      max-width: 440px;
+      line-height: 1.65;
+    }
+    .hero-sub strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 4px 16px rgba(201,168,76,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.4); background: var(--gold-light); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+    }
+    .stat { }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .hero-image-wrap {
+      position: relative;
+      height: 100%;
+      min-height: 550px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      position: absolute;
+      inset: 0;
+      opacity: 0.85;
+      filter: saturate(0.9);
+    }
+    .hero-card {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 16px 20px;
+      color: var(--white);
+      font-size: 14px;
+      max-width: 260px;
+      line-height: 1.5;
+    }
+    .hero-card strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 13px; color: var(--gold-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 80px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+    .section-lead {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--beige); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-photo {
+      position: relative;
+    }
+    .about-photo img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      object-position: top;
+      filter: grayscale(5%) saturate(0.95);
+    }
+    .about-photo-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 16px 20px;
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 200px;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-photo-badge strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gold-light);
+      margin-bottom: 2px;
+    }
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .about-quote {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-style: italic;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.65;
+      box-shadow: var(--shadow);
+    }
+    .about-perks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .perk-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--gray-light); }
+    .services-header { text-align: center; margin-bottom: 48px; }
+    .services-header .section-lead { margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card.flagship {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+    }
+    .service-card:not(.flagship):hover {
+      border-color: var(--navy);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-card.flagship:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .flagship .service-icon { background: rgba(255,255,255,0.15); }
+    .service-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .flagship .service-label { color: var(--gold-light); }
+    .service-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .flagship .service-title { color: var(--white); font-size: 22px; }
+    .service-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .flagship .service-desc { color: rgba(255,255,255,0.8); font-size: 15px; }
+    .service-list {
+      list-style: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .service-list li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-list li::before { content: '→'; color: var(--gold-light); font-weight: 700; }
+    .service-price {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .service-price-dark {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: var(--beige);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ── HOW WE WORK ── */
+    .how { background: var(--white); }
+    .how-header { margin-bottom: 56px; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(12.5%);
+      right: calc(12.5%);
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy), var(--gold));
+      z-index: 0;
+    }
+    .step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 16px rgba(26,58,92,0.25);
+    }
+    .step:nth-child(2) .step-num { background: var(--navy-light); }
+    .step:nth-child(3) .step-num { background: var(--gold); color: var(--navy); }
+    .step:nth-child(4) .step-num { background: var(--gold); color: var(--navy); }
+    .step-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .step-text {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ── CASES ── */
+    .cases { background: var(--beige); }
+    .cases-header { margin-bottom: 48px; }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .case-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .case-tag {
+      display: inline-block;
+      background: var(--beige);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .case-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.35;
+    }
+    .case-row {
+      margin-bottom: 12px;
+    }
+    .case-row-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+    .case-row-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .case-result {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 10px;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .case-result span { color: var(--gold-light); }
+
+    /* ── PRICING ── */
+    .pricing { background: var(--gray-light); }
+    .pricing-header { text-align: center; margin-bottom: 48px; }
+    .pricing-header .section-lead { margin: 0 auto; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .price-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+      box-shadow: var(--shadow);
+    }
+    .price-card.featured {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+      transform: scale(1.04);
+    }
+    .price-icon { font-size: 32px; margin-bottom: 16px; }
+    .price-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .featured .price-name { color: var(--gold-light); }
+    .price-amount {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .featured .price-amount { color: var(--white); }
+    .price-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    .featured .price-note { color: rgba(255,255,255,0.6); }
+    .price-list {
+      list-style: none;
+      text-align: left;
+      font-size: 13.5px;
+      color: var(--gray);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .featured .price-list { color: rgba(255,255,255,0.8); }
+    .price-list li { display: flex; align-items: flex-start; gap: 8px; }
+    .price-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .featured .price-list li::before { color: var(--gold-light); }
+    .price-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 30px;
+      border: 2px solid var(--navy);
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s, color 0.2s;
+    }
+    .price-btn:hover { background: var(--navy); color: var(--white); }
+    .price-card.featured .price-btn {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+    .price-card.featured .price-btn:hover { background: var(--gold-light); }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--navy); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-info .section-tag { color: var(--gold-light); }
+    .contact-info .section-title { color: var(--white); }
+    .contact-info .section-lead { color: rgba(255,255,255,0.7); margin-bottom: 36px; }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    .contact-link:hover { color: var(--gold-light); }
+    .contact-link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .contact-link:hover .contact-link-icon { background: rgba(255,255,255,0.2); }
+    .contact-form {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px;
+    }
+    .form-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-sub { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--gray-light);
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--navy);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .form-privacy {
+      font-size: 11.5px;
+      color: var(--gray);
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d1f33;
+      color: rgba(255,255,255,0.5);
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    /* ── FLOATING BUTTON ── */
+    .float-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      text-decoration: none;
+      font-size: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .float-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.55); }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,20,40,0.7);
+      z-index: 300;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px;
+      max-width: 440px;
+      width: 100%;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--gray);
+      line-height: 1;
+    }
+    .modal-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .modal-sub { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: 40px 24px 32px; }
+      .hero-image-wrap { min-height: 400px; }
+      .hero-stats { gap: 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-photo-badge { right: 10px; bottom: 10px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.flagship { grid-column: span 1; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .steps::before { display: none; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
+      .price-card.featured { transform: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 60px 20px; }
+      .hero-content { padding: 32px 20px; }
+      .hero h1 { font-size: 28px; }
+      .hero-sub { font-size: 15px; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-secondary { justify-content: center; }
+      .hero-stats { gap: 20px; }
+      .stat-num { font-size: 22px; }
+      .steps { grid-template-columns: 1fr; }
+      .about-perks { grid-template-columns: 1fr; }
+      .float-btn { bottom: 20px; right: 20px; width: 54px; height: 54px; font-size: 24px; }
+      .contact-form { padding: 24px 20px; }
+    }
+
+    /* ── SUCCESS STATE ── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .form-success.show { display: block; }
+    .form-success-icon { font-size: 48px; margin-bottom: 12px; }
+    .form-success h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .form-success p { color: var(--gray); font-size: 15px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">Полина <span>Дударькова</span></a>
+  <a href="#contact" class="nav-cta">Записаться →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-badge">⚖️ Юрист в Томске · Онлайн и офлайн</div>
+    <h1>Ваш личный юрист по <em>семейным и гражданским</em> делам</h1>
+    <p class="hero-sub">
+      Помогу пройти судебный процесс спокойно и с пониманием своих прав.<br/>
+      <strong>Опыт работы внутри судебной системы</strong> позволяет мне видеть ваше дело глазами судьи.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/79XXXXXXXXX" class="btn-primary" target="_blank" rel="noopener">
+        💬 Написать в WhatsApp
+      </a>
+      <a href="#contact" class="btn-secondary">
+        📝 Записаться на консультацию
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">лет практики</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">дел завершено</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">конфиденциально</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img class="hero-img" src="awsUnpRncPHFhdw0GO7Vp9eSRPRXSfSMUou_H4lNwA28dzrR7l9-aFRw8WI8nXe20LcgbtIniUhIeAe4aXNtDzkU.jpg" alt="Полина Дударькова — юрист в Томске" />
+    <div class="hero-card">
+      <strong>Инсайдерский опыт</strong>
+      Работала секретарём судебного заседания и помощником судьи — знаю систему изнутри
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="WE5PJhXYFJu1yOTsDzltgOaAhGL33rmEXOp2vjPmx4iophcDdIGEiHjhTM6fErEV0Ap8897yFhSbmYbk4WaeeqpG.jpg" alt="Полина Дударькова — почему обращаются ко мне" />
+        <div class="about-photo-badge">
+          <strong>Ваши права —</strong>
+          моя работа
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">Обо мне</div>
+        <h2 class="section-title">Почему мне доверяют решение сложных споров?</h2>
+        <p>
+          Здравствуйте! Меня зовут Полина Дударькова. Я практикующий юрист по семейным делам, гражданским спорам, недвижимости, трудовому и социальному праву.
+        </p>
+        <p>
+          Мой путь начался внутри судебной системы: я работала секретарём судебного заседания и помощником судьи. Это даёт мне понимание того, как судья читает иск, на какие доказательства обращает внимание в первую очередь и как правильно выстроить стратегию защиты.
+        </p>
+        <div class="about-quote">
+          «Мой опыт — это не только практика со стороны представителя. Я знаю систему изнутри, понимаю, как принимаются решения и на что действительно обращает внимание суд»
+        </div>
+        <div class="about-perks">
+          <div class="perk">
+            <div class="perk-icon">🔒</div>
+            <span>Полная конфиденциальность</span>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">💬</div>
+            <span>Понятный язык без сложных терминов</span>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">🎯</div>
+            <span>Честная оценка перспектив дела</span>
+          </div>
+          <div class="perk">
+            <div class="perk-icon">🛡️</div>
+            <span>Сопровождение до результата</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-tag">Направления работы</div>
+      <h2 class="section-title">Чем я могу помочь</h2>
+      <p class="section-lead">Работаю с физическими лицами в Томске и онлайн по всей России</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card flagship">
+        <div class="service-icon">👨‍👩‍👧</div>
+        <div class="service-label">Флагманское направление</div>
+        <div class="service-title">Семейные споры</div>
+        <p class="service-desc">Самая эмоционально сложная ситуация — развод и раздел. Я беру на себя всю бумажную работу и переговоры, чтобы вы сохранили спокойствие.</p>
+        <ul class="service-list">
+          <li>Развод через суд и ЗАГС</li>
+          <li>Раздел имущества (в т. ч. бизнеса и долгов)</li>
+          <li>Определение места жительства детей</li>
+          <li>Взыскание и изменение алиментов</li>
+          <li>Порядок общения с ребёнком</li>
+        </ul>
+        <span class="service-price">от 3 000 ₽</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <div class="service-label">Недвижимость</div>
+        <div class="service-title">Жилищные споры</div>
+        <p class="service-desc">Сопровождение сделок, оспаривание договоров, выселение и вселение, споры с соседями и управляющими компаниями.</p>
+        <span class="service-price-dark">от 2 000 ₽</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <div class="service-label">Труд</div>
+        <div class="service-title">Трудовые споры</div>
+        <p class="service-desc">Незаконное увольнение, невыплата зарплаты, восстановление на работе — защищу ваши права перед работодателем.</p>
+        <span class="service-price-dark">от 2 500 ₽</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="service-label">Документы</div>
+        <div class="service-title">Составление документов</div>
+        <p class="service-desc">Исковые заявления, претензии, договоры, жалобы — составлю грамотно с учётом судебной практики Томска.</p>
+        <span class="service-price-dark">от 1 500 ₽</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <div class="service-label">Защита</div>
+        <div class="service-title">Представительство в суде</div>
+        <p class="service-desc">Выступлю в суде вместо вас или вместе с вами. Имею практику арбитражных процессов, в том числе по делам о банкротстве.</p>
+        <span class="service-price-dark">от 5 000 ₽</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <div class="service-label">Право</div>
+        <div class="service-title">Социальное право и консультации</div>
+        <p class="service-desc">Защита прав в госорганах, консультации по любым гражданским ситуациям — устно и письменно.</p>
+        <span class="service-price-dark">от 1 000 ₽</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-tag">Этапы работы</div>
+      <h2 class="section-title">Как мы будем работать</h2>
+      <p class="section-lead">Прозрачный процесс без неожиданностей</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Первичный разбор</div>
+        <p class="step-text">Рассказываете о проблеме в мессенджере или по телефону. Уже на этом этапе я понимаю суть ситуации.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Анализ и прогноз</div>
+        <p class="step-text">Изучаю документы, даю честную оценку перспектив в суде — без ложных обещаний и завышенных ожиданий.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Стратегия защиты</div>
+        <p class="step-text">Разрабатываю план: досудебное урегулирование или суд. Готовлю исковые заявления и все документы.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Сопровождение до конца</div>
+        <p class="step-text">Участвую в заседаниях, общаюсь с оппонентами и судом. Вы сохраняете спокойствие — я беру всё на себя.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="cases-header">
+      <div class="section-tag">Практика</div>
+      <h2 class="section-title">Реальные истории клиентов</h2>
+      <p class="section-lead">Без имён и персональных данных — только факты и результат</p>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card">
+        <span class="case-tag">Раздел имущества</span>
+        <div class="case-title">Супруг скрывал доходы при разделе квартиры и машины</div>
+        <div class="case-row">
+          <div class="case-row-label">Ситуация</div>
+          <div class="case-row-text">Клиентка обратилась после развода: муж занижал реальный доход и настаивал на неравном разделе совместно нажитого имущества.</div>
+        </div>
+        <div class="case-row">
+          <div class="case-row-label">Что было сделано</div>
+          <div class="case-row-text">Используя опыт работы в суде, запросили финансовые документы через суд, установили реальный доход и оспорили раздел.</div>
+        </div>
+        <div class="case-result">
+          <span>Результат:</span> равный раздел квартиры и автомобиля, выплата компенсации клиентке
+        </div>
+      </div>
+
+      <div class="case-card">
+        <span class="case-tag">Алименты</span>
+        <div class="case-title">Отец платил символические алименты при высокой неофициальной зарплате</div>
+        <div class="case-row">
+          <div class="case-row-label">Ситуация</div>
+          <div class="case-row-text">Отец ребёнка официально числился с минимальным доходом, выплачивая алименты в размере 2 300 ₽ в месяц.</div>
+        </div>
+        <div class="case-row">
+          <div class="case-row-label">Что было сделано</div>
+          <div class="case-row-text">Составили иск об установлении алиментов в твёрдой денежной сумме с учётом реального уровня жизни семьи.</div>
+        </div>
+        <div class="case-result">
+          <span>Результат:</span> алименты увеличены до 18 000 ₽ в месяц в твёрдой денежной сумме
+        </div>
+      </div>
+
+      <div class="case-card">
+        <span class="case-tag">Незаконное увольнение</span>
+        <div class="case-title">Работодатель уволил сотрудника без оснований в период больничного</div>
+        <div class="case-row">
+          <div class="case-row-label">Ситуация</div>
+          <div class="case-row-text">Клиент был уволен во время нахождения на больничном листе. Работодатель ссылался на нарушение трудовой дисциплины.</div>
+        </div>
+        <div class="case-row">
+          <div class="case-row-label">Что было сделано</div>
+          <div class="case-row-text">Подготовили жалобу в трудовую инспекцию и иск о восстановлении с требованием компенсации вынужденного прогула.</div>
+        </div>
+        <div class="case-result">
+          <span>Результат:</span> восстановление на работе + компенсация за весь период прогула
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="section-tag">Стоимость</div>
+      <h2 class="section-title">Прозрачные цены</h2>
+      <p class="section-lead">Точная стоимость определяется после изучения ситуации. Базовые тарифы — ниже.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <div class="price-icon">💬</div>
+        <div class="price-name">Консультация</div>
+        <div class="price-amount">от 1 000 ₽</div>
+        <div class="price-note">устная или письменная</div>
+        <ul class="price-list">
+          <li>Разбор вашей ситуации</li>
+          <li>Оценка перспектив дела</li>
+          <li>Ответы на вопросы</li>
+        </ul>
+        <a href="#contact" class="price-btn">Записаться</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-icon">⚖️</div>
+        <div class="price-name">Ведение дела в суде</div>
+        <div class="price-amount">от 15 000 ₽</div>
+        <div class="price-note">полное сопровождение</div>
+        <ul class="price-list">
+          <li>Стратегия защиты</li>
+          <li>Все документы и иски</li>
+          <li>Участие в заседаниях</li>
+          <li>Без вашего присутствия</li>
+        </ul>
+        <a href="#contact" class="price-btn">Записаться</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-icon">📄</div>
+        <div class="price-name">Составление документов</div>
+        <div class="price-amount">от 1 500 ₽</div>
+        <div class="price-note">иск, претензия, договор</div>
+        <ul class="price-list">
+          <li>Исковые заявления</li>
+          <li>Претензии и жалобы</li>
+          <li>Договоры и соглашения</li>
+        </ul>
+        <a href="#contact" class="price-btn">Заказать</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-tag">Контакты</div>
+        <h2 class="section-title">Готова ответить<br/>на ваш вопрос</h2>
+        <p class="section-lead">Оставьте заявку — свяжусь в течение часа. Первичная беседа бесплатна.</p>
+        <div class="contact-links">
+          <a href="https://wa.me/79XXXXXXXXX" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link-icon">📱</div>
+            <span>WhatsApp — написать прямо сейчас</span>
+          </a>
+          <a href="https://t.me/polina1201" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link-icon">✈️</div>
+            <span>Telegram — @polina1201</span>
+          </a>
+          <a href="https://vk.com/polina1201" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link-icon">🔵</div>
+            <span>ВКонтакте — @polina1201</span>
+          </a>
+          <a href="tel:+79XXXXXXXXX" class="contact-link">
+            <div class="contact-link-icon">📞</div>
+            <span>Позвонить: +7 (9XX) XXX-XX-XX</span>
+          </a>
+          <div class="contact-link" style="cursor:default">
+            <div class="contact-link-icon">📍</div>
+            <span>Томск — приём очно и онлайн по всей России</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-title">Записаться на консультацию</div>
+        <div class="form-sub">Оставьте номер — перезвоню в течение часа</div>
+        <form id="mainForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label>Ваше имя</label>
+            <input type="text" placeholder="Как к вам обращаться?" required />
+          </div>
+          <div class="form-group">
+            <label>Телефон или Telegram</label>
+            <input type="text" placeholder="+7 (___) ___-__-__" required />
+          </div>
+          <div class="form-group">
+            <label>Тема обращения</label>
+            <select>
+              <option value="">Выберите направление</option>
+              <option>Семейный спор / развод</option>
+              <option>Раздел имущества</option>
+              <option>Алименты</option>
+              <option>Жилищный спор</option>
+              <option>Трудовой спор</option>
+              <option>Составление документов</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Коротко о ситуации (необязательно)</label>
+            <textarea placeholder="Опишите в двух словах, что случилось..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Отправить заявку →</button>
+          <div class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Вся информация строго конфиденциальна.</div>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✅</div>
+          <h3>Заявка отправлена!</h3>
+          <p>Полина свяжется с вами в течение часа. Если срочно — напишите в WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2024 Дударькова Полина — юрист по семейным и гражданским делам в Томске</div>
+  <div style="margin-top:6px">
+    <a href="https://vk.com/polina1201">ВКонтакте</a> &nbsp;·&nbsp;
+    <a href="https://t.me/polina1201">Telegram</a>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/79XXXXXXXXX" class="float-btn" target="_blank" rel="noopener" title="Написать в WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('mainForm').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  }
+
+  // Smooth nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 80;
+    sections.forEach(s => {
+      if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+        document.querySelectorAll('.nav a').forEach(a => {
+          a.style.opacity = a.getAttribute('href') === '#' + s.id ? '1' : '0.7';
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
