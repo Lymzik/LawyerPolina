@@ -6,6 +6,10 @@
   <title>Дударькова Полина — семейный юрист в Томске</title>
   <meta name="description" content="Семейный юрист в Томске. Разводы, раздел имущества, алименты, жилищные споры, трудовые конфликты. Опыт работы внутри судебной системы. Консультация онлайн и офлайн." />
   <meta name="keywords" content="семейный юрист Томск, юрист по разделу имущества Томск, консультация юриста гражданское право, бракоразводный процесс адвокат, развод юрист Томск, алименты юрист" />
+  <meta property="og:title" content="Дударькова Полина — семейный юрист в Томске" />
+  <meta property="og:description" content="Помогу пройти судебный процесс спокойно и с пониманием ваших прав. Опыт работы внутри судебной системы." />
+  <meta property="og:image" content="2.jpg" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -37,6 +41,8 @@
       background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
     }
 
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
@@ -827,8 +833,9 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-content { padding: 40px 24px 32px; }
-      .hero-image-wrap { min-height: 400px; }
-      .hero-stats { gap: 24px; }
+      .hero-image-wrap { min-height: 400px; position: relative; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-card { bottom: 16px; left: 16px; right: 16px; max-width: none; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-photo-badge { right: 10px; bottom: 10px; }
       .services-grid { grid-template-columns: 1fr; }
@@ -842,18 +849,43 @@
     }
 
     @media (max-width: 600px) {
-      section { padding: 60px 20px; }
-      .hero-content { padding: 32px 20px; }
-      .hero h1 { font-size: 28px; }
-      .hero-sub { font-size: 15px; }
+      section { padding: 60px 16px; }
+      .nav { padding: 0 16px; }
+      .nav-logo { font-size: 15px; }
+      .hero-content { padding: 28px 16px; }
+      .hero h1 { font-size: 26px; }
+      .hero-sub { font-size: 15px; margin-bottom: 28px; }
       .hero-btns { flex-direction: column; }
-      .btn-primary, .btn-secondary { justify-content: center; }
-      .hero-stats { gap: 20px; }
+      .btn-primary, .btn-secondary { justify-content: center; padding: 16px 24px; font-size: 15px; min-height: 48px; }
+      .hero-stats { gap: 16px; }
       .stat-num { font-size: 22px; }
+      .hero-image-wrap { min-height: 340px; }
+      .hero-card { font-size: 13px; padding: 12px 16px; bottom: 12px; left: 12px; right: 12px; }
       .steps { grid-template-columns: 1fr; }
+      .step-num { width: 56px; height: 56px; font-size: 18px; }
       .about-perks { grid-template-columns: 1fr; }
-      .float-btn { bottom: 20px; right: 20px; width: 54px; height: 54px; font-size: 24px; }
-      .contact-form { padding: 24px 20px; }
+      .about-quote { padding: 16px 18px; font-size: 15px; }
+      .float-btn { bottom: 20px; right: 16px; width: 54px; height: 54px; font-size: 24px; }
+      .contact-form { padding: 24px 18px; }
+      .contact-link { font-size: 14px; }
+      .contact-link-icon { width: 40px; height: 40px; font-size: 18px; }
+      .section-title { font-size: 24px; }
+      .form-group input,
+      .form-group select,
+      .form-group textarea { font-size: 16px; padding: 14px 16px; }
+      .form-submit { padding: 16px; font-size: 15px; min-height: 48px; }
+      .price-btn { padding: 14px; min-height: 48px; }
+      .service-card { padding: 24px 20px; }
+      .case-card { padding: 24px 20px; }
+      .price-card { padding: 24px 20px; }
+    }
+
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 23px; }
+      .hero-badge { font-size: 12px; padding: 5px 12px; }
+      .stat-num { font-size: 20px; }
+      .stat-label { font-size: 11px; }
+      .section-title { font-size: 22px; }
     }
 
     /* ── SUCCESS STATE ── */
@@ -914,7 +946,7 @@
     </div>
   </div>
   <div class="hero-image-wrap">
-    <img class="hero-img" src="awsUnpRncPHFhdw0GO7Vp9eSRPRXSfSMUou_H4lNwA28dzrR7l9-aFRw8WI8nXe20LcgbtIniUhIeAe4aXNtDzkU.jpg" alt="Полина Дударькова — юрист в Томске" />
+    <img class="hero-img" src="2.jpg" alt="Полина Дударькова — юрист в Томске" />
     <div class="hero-card">
       <strong>Инсайдерский опыт</strong>
       Работала секретарём судебного заседания и помощником судьи — знаю систему изнутри
@@ -1262,7 +1294,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div>© 2024 Дударькова Полина — юрист по семейным и гражданским делам в Томске</div>
+  <div>© 2025 Дударькова Полина — юрист по семейным и гражданским делам в Томске</div>
   <div style="margin-top:6px">
     <a href="https://vk.com/polina1201">ВКонтакте</a> &nbsp;·&nbsp;
     <a href="https://t.me/polina1201">Telegram</a>
