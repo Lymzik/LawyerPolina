@@ -3,19 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO-НАСТРОЙКИ
+       Здесь меняется заголовок вкладки браузера и описание для поисковиков.
+       Чтобы изменить — просто отредактируйте текст в кавычках content="..."
+       ============================================================ -->
   <title>Дударькова Полина — семейный юрист в Томске</title>
   <meta name="description" content="Семейный юрист в Томске. Разводы, раздел имущества, алименты, жилищные споры, трудовые конфликты. Опыт работы внутри судебной системы. Консультация онлайн и офлайн." />
   <meta name="keywords" content="семейный юрист Томск, юрист по разделу имущества Томск, консультация юриста гражданское право, бракоразводный процесс адвокат, развод юрист Томск, алименты юрист" />
+
+  <!-- ============================================================
+       OPEN GRAPH — превью при отправке ссылки в WhatsApp / Telegram / ВК
+       og:title — заголовок превью
+       og:description — описание превью
+       og:image — картинка превью (файл должен лежать рядом с index.html)
+       ============================================================ -->
   <meta property="og:title" content="Дударькова Полина — семейный юрист в Томске" />
   <meta property="og:description" content="Помогу пройти судебный процесс спокойно и с пониманием ваших прав. Опыт работы внутри судебной системы." />
   <meta property="og:image" content="2.jpg" />
   <meta property="og:type" content="website" />
+
+  <!-- ============================================================
+       ШРИФТЫ — подключаются из Google Fonts
+       Inter — для обычного текста
+       Montserrat — для заголовков
+       Чтобы сменить шрифт — замените название в ссылке и в CSS ниже
+       ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ==============================================================
+       ЦВЕТОВАЯ ПАЛИТРА
+       Чтобы изменить цвет на всём сайте — поменяйте значение здесь.
+       Например: --navy: #2c3e50;  сделает основной цвет темнее.
+       --navy        — основной тёмно-синий (навбар, кнопки, заголовки)
+       --navy-light  — светлее синий (hover-эффекты)
+       --beige       — бежевый фон секций
+       --gold        — золотой акцент (кнопки, метки)
+       --gold-light  — светло-золотой (текст на тёмном фоне)
+       --gray        — серый текст (описания, подписи)
+       --text        — основной цвет текста
+       ============================================================== -->
     :root {
       --navy: #1a3a5c;
       --navy-light: #2a5080;
@@ -47,7 +80,12 @@
 
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
 
-    /* ── NAV ── */
+    /* ==============================================================
+       НАВИГАЦИЯ (верхняя панель)
+       Фиксируется вверху при прокрутке.
+       .nav-logo — имя слева
+       .nav-cta  — кнопка "Записаться" справа
+       ============================================================== */
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -85,7 +123,11 @@
     }
     .nav-cta:hover { background: var(--navy-light); transform: translateY(-1px); }
 
-    /* ── HERO ── */
+    /* ==============================================================
+       БЛОК 1: HERO — главный экран (первое, что видит посетитель)
+       Слева текст + кнопки, справа фото.
+       Чтобы сменить фото — замените src="2.jpg" в HTML ниже.
+       ============================================================== */
     .hero {
       min-height: 100vh;
       padding-top: 60px;
@@ -141,12 +183,15 @@
       line-height: 1.65;
     }
     .hero-sub strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+
+    /* Кнопки в hero-блоке */
     .hero-btns {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 48px;
     }
+    /* Основная кнопка (золотая) */
     .btn-primary {
       background: var(--gold);
       color: var(--navy);
@@ -165,6 +210,7 @@
       box-shadow: 0 4px 16px rgba(201,168,76,0.3);
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.4); background: var(--gold-light); }
+    /* Вторичная кнопка (прозрачная с рамкой) */
     .btn-secondary {
       background: transparent;
       color: var(--white);
@@ -182,6 +228,8 @@
       transition: border-color 0.2s, background 0.2s, transform 0.2s;
     }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+    /* Статистика в hero (5+ лет, 200+ дел и т.д.) */
     .hero-stats {
       display: flex;
       gap: 32px;
@@ -199,6 +247,8 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
+    /* Обёртка для фото в hero */
     .hero-image-wrap {
       position: relative;
       height: 100%;
@@ -217,6 +267,7 @@
       opacity: 0.85;
       filter: saturate(0.9);
     }
+    /* Стеклянная карточка поверх фото */
     .hero-card {
       position: absolute;
       bottom: 32px;
@@ -233,7 +284,14 @@
     }
     .hero-card strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 13px; color: var(--gold-light); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    /* ── SECTION COMMON ── */
+    /* ==============================================================
+       ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СЕКЦИЙ
+       section — отступы сверху/снизу у каждого блока
+       .container — ограничивает ширину контента (max 1100px)
+       .section-tag — маленькая метка сверху ("Обо мне", "Услуги" и т.д.)
+       .section-title — заголовок секции
+       .section-lead — описание под заголовком
+       ============================================================== */
     section { padding: 80px 24px; }
     .container { max-width: 1100px; margin: 0 auto; }
     .section-tag {
@@ -259,7 +317,12 @@
       line-height: 1.65;
     }
 
-    /* ── ABOUT ── */
+    /* ==============================================================
+       БЛОК 2: ОБО МНЕ
+       Слева фото, справа текст.
+       Чтобы сменить фото — замените src="..." в HTML ниже.
+       Цитата выделена золотой полоской слева (.about-quote).
+       ============================================================== */
     .about { background: var(--beige); }
     .about-grid {
       display: grid;
@@ -279,6 +342,7 @@
       object-position: top;
       filter: grayscale(5%) saturate(0.95);
     }
+    /* Плашка "Ваши права — моя работа" поверх фото */
     .about-photo-badge {
       position: absolute;
       bottom: -20px;
@@ -306,6 +370,7 @@
       font-size: 16px;
       line-height: 1.7;
     }
+    /* Цитата с золотой полоской */
     .about-quote {
       background: var(--white);
       border-left: 4px solid var(--gold);
@@ -318,6 +383,7 @@
       line-height: 1.65;
       box-shadow: var(--shadow);
     }
+    /* 4 преимущества (конфиденциальность, понятный язык и т.д.) */
     .about-perks {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -346,7 +412,13 @@
       margin-top: 1px;
     }
 
-    /* ── SERVICES ── */
+    /* ==============================================================
+       БЛОК 3: УСЛУГИ
+       Карточки с иконками. Первая карточка (.flagship) — широкая,
+       занимает 2 колонки и выделена синим цветом.
+       Чтобы изменить цену — найдите service-price / service-price-dark.
+       Чтобы добавить услугу — скопируйте блок <div class="service-card">
+       ============================================================== */
     .services { background: var(--gray-light); }
     .services-header { text-align: center; margin-bottom: 48px; }
     .services-header .section-lead { margin: 0 auto; }
@@ -365,6 +437,7 @@
       position: relative;
       overflow: hidden;
     }
+    /* Флагманская карточка (семейные споры) — синий фон */
     .service-card.flagship {
       grid-column: span 2;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
@@ -426,6 +499,7 @@
       gap: 8px;
     }
     .service-list li::before { content: '→'; color: var(--gold-light); font-weight: 700; }
+    /* Цена на светлом фоне карточки (для флагмана) */
     .service-price {
       display: inline-block;
       margin-top: 16px;
@@ -436,6 +510,7 @@
       font-weight: 600;
       color: var(--white);
     }
+    /* Цена на белом фоне (обычные карточки) */
     .service-price-dark {
       display: inline-block;
       margin-top: 16px;
@@ -447,7 +522,11 @@
       color: var(--navy);
     }
 
-    /* ── HOW WE WORK ── */
+    /* ==============================================================
+       БЛОК 4: ЭТАПЫ РАБОТЫ
+       4 шага с кругами-номерами и соединительной линией.
+       Чтобы изменить текст шага — найдите <div class="step"> в HTML.
+       ============================================================== */
     .how { background: var(--white); }
     .how-header { margin-bottom: 56px; }
     .steps {
@@ -456,6 +535,7 @@
       gap: 0;
       position: relative;
     }
+    /* Соединительная линия между шагами */
     .steps::before {
       content: '';
       position: absolute;
@@ -472,6 +552,7 @@
       position: relative;
       z-index: 1;
     }
+    /* Круг с номером шага */
     .step-num {
       width: 72px;
       height: 72px;
@@ -503,7 +584,11 @@
       line-height: 1.6;
     }
 
-    /* ── CASES ── */
+    /* ==============================================================
+       БЛОК 5: КЕЙСЫ (истории клиентов)
+       3 карточки: ситуация → что сделано → результат.
+       Чтобы добавить кейс — скопируйте <div class="case-card"> в HTML.
+       ============================================================== */
     .cases { background: var(--beige); }
     .cases-header { margin-bottom: 48px; }
     .cases-grid {
@@ -555,6 +640,7 @@
       color: var(--text);
       line-height: 1.55;
     }
+    /* Плашка с результатом (синий фон) */
     .case-result {
       margin-top: 16px;
       padding: 12px 16px;
@@ -567,7 +653,11 @@
     }
     .case-result span { color: var(--gold-light); }
 
-    /* ── PRICING ── */
+    /* ==============================================================
+       БЛОК 6: ЦЕНЫ
+       3 тарифа. Средний (.featured) выделен синим цветом.
+       Чтобы изменить цену — найдите <div class="price-amount"> в HTML.
+       ============================================================== */
     .pricing { background: var(--gray-light); }
     .pricing-header { text-align: center; margin-bottom: 48px; }
     .pricing-header .section-lead { margin: 0 auto; }
@@ -587,6 +677,7 @@
       transition: border-color 0.2s, transform 0.2s;
       box-shadow: var(--shadow);
     }
+    /* Выделенный тариф (ведение дела в суде) */
     .price-card.featured {
       background: var(--navy);
       color: var(--white);
@@ -653,7 +744,12 @@
     }
     .price-card.featured .price-btn:hover { background: var(--gold-light); }
 
-    /* ── CONTACT ── */
+    /* ==============================================================
+       БЛОК 7: КОНТАКТЫ И ФОРМА
+       Слева — ссылки на мессенджеры и телефон.
+       Справа — форма записи на консультацию.
+       ВАЖНО: Замените 79XXXXXXXXX на реальный номер WhatsApp!
+       ============================================================== */
     .contact { background: var(--navy); }
     .contact-grid {
       display: grid;
@@ -692,6 +788,8 @@
       transition: background 0.2s;
     }
     .contact-link:hover .contact-link-icon { background: rgba(255,255,255,0.2); }
+
+    /* Форма записи на консультацию */
     .contact-form {
       background: var(--white);
       border-radius: 20px;
@@ -759,7 +857,10 @@
       line-height: 1.5;
     }
 
-    /* ── FOOTER ── */
+    /* ==============================================================
+       ПОДВАЛ (FOOTER)
+       Год, ссылки на соцсети.
+       ============================================================== */
     footer {
       background: #0d1f33;
       color: rgba(255,255,255,0.5);
@@ -769,7 +870,11 @@
     }
     footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
 
-    /* ── FLOATING BUTTON ── */
+    /* ==============================================================
+       ПЛАВАЮЩАЯ КНОПКА WHATSAPP (зелёный кружок внизу справа)
+       Всегда видна при прокрутке.
+       ВАЖНО: Замените 79XXXXXXXXX на реальный номер в HTML ниже!
+       ============================================================== */
     .float-btn {
       position: fixed;
       bottom: 28px;
@@ -790,7 +895,7 @@
     }
     .float-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.55); }
 
-    /* ── MODAL ── */
+    /* Модальное окно (заготовка, сейчас не используется) */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -829,7 +934,10 @@
     }
     .modal-sub { font-size: 14px; color: var(--gray); margin-bottom: 24px; }
 
-    /* ── RESPONSIVE ── */
+    /* ==============================================================
+       АДАПТИВНОСТЬ — ПЛАНШЕТЫ (экраны до 900px)
+       Всё перестраивается в одну колонку.
+       ============================================================== */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-content { padding: 40px 24px 32px; }
@@ -848,6 +956,11 @@
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
 
+    /* ==============================================================
+       АДАПТИВНОСТЬ — ТЕЛЕФОНЫ (экраны до 600px)
+       Уменьшаем шрифты, увеличиваем кнопки для удобства нажатия.
+       font-size: 16px на input — предотвращает автозум на iPhone.
+       ============================================================== */
     @media (max-width: 600px) {
       section { padding: 60px 16px; }
       .nav { padding: 0 16px; }
@@ -880,6 +993,7 @@
       .price-card { padding: 24px 20px; }
     }
 
+    /* Очень маленькие экраны (до 380px) */
     @media (max-width: 380px) {
       .hero h1 { font-size: 23px; }
       .hero-badge { font-size: 12px; padding: 5px 12px; }
@@ -888,7 +1002,7 @@
       .section-title { font-size: 22px; }
     }
 
-    /* ── SUCCESS STATE ── */
+    /* Сообщение об успешной отправке формы */
     .form-success {
       display: none;
       text-align: center;
@@ -907,13 +1021,25 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ================================================================
+     НАВИГАЦИЯ — верхняя панель
+     Чтобы изменить имя — отредактируйте текст внутри <a class="nav-logo">
+     Кнопка "Записаться" ведёт к блоку контактов (#contact)
+     ================================================================ -->
 <nav class="nav">
   <a href="#" class="nav-logo">Полина <span>Дударькова</span></a>
   <a href="#contact" class="nav-cta">Записаться →</a>
 </nav>
 
-<!-- HERO -->
+<!-- ================================================================
+     БЛОК 1: HERO — главный экран
+     Здесь меняются:
+     - Заголовок и подзаголовок
+     - Ссылка на WhatsApp (замените 79XXXXXXXXX на реальный номер)
+     - Фото (замените src="2.jpg" на имя нового файла)
+     - Статистика (5+, 200+, 100%)
+     - Текст в стеклянной карточке поверх фото
+     ================================================================ -->
 <section class="hero" id="top">
   <div class="hero-content">
     <div class="hero-badge">⚖️ Юрист в Томске · Онлайн и офлайн</div>
@@ -923,6 +1049,7 @@
       <strong>Опыт работы внутри судебной системы</strong> позволяет мне видеть ваше дело глазами судьи.
     </p>
     <div class="hero-btns">
+      <!-- ВАЖНО: замените 79XXXXXXXXX на реальный номер WhatsApp -->
       <a href="https://wa.me/79XXXXXXXXX" class="btn-primary" target="_blank" rel="noopener">
         💬 Написать в WhatsApp
       </a>
@@ -930,6 +1057,7 @@
         📝 Записаться на консультацию
       </a>
     </div>
+    <!-- Статистика — измените цифры по необходимости -->
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-num">5+</div>
@@ -946,6 +1074,7 @@
     </div>
   </div>
   <div class="hero-image-wrap">
+    <!-- Главное фото. Чтобы заменить — положите новый файл рядом и измените src -->
     <img class="hero-img" src="2.jpg" alt="Полина Дударькова — юрист в Томске" />
     <div class="hero-card">
       <strong>Инсайдерский опыт</strong>
@@ -954,11 +1083,19 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ================================================================
+     БЛОК 2: ОБО МНЕ
+     Здесь меняются:
+     - Фото слева (замените src="..." на имя нового файла)
+     - Текст о себе (два абзаца <p>)
+     - Цитата (внутри div class="about-quote")
+     - 4 преимущества (div class="perk")
+     ================================================================ -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-photo">
+        <!-- Фото в блоке "Обо мне" -->
         <img src="WE5PJhXYFJu1yOTsDzltgOaAhGL33rmEXOp2vjPmx4iophcDdIGEiHjhTM6fErEV0Ap8897yFhSbmYbk4WaeeqpG.jpg" alt="Полина Дударькова — почему обращаются ко мне" />
         <div class="about-photo-badge">
           <strong>Ваши права —</strong>
@@ -974,9 +1111,11 @@
         <p>
           Мой путь начался внутри судебной системы: я работала секретарём судебного заседания и помощником судьи. Это даёт мне понимание того, как судья читает иск, на какие доказательства обращает внимание в первую очередь и как правильно выстроить стратегию защиты.
         </p>
+        <!-- Цитата — выделена золотой полоской слева -->
         <div class="about-quote">
           «Мой опыт — это не только практика со стороны представителя. Я знаю систему изнутри, понимаю, как принимаются решения и на что действительно обращает внимание суд»
         </div>
+        <!-- 4 преимущества — можно менять текст и иконки -->
         <div class="about-perks">
           <div class="perk">
             <div class="perk-icon">🔒</div>
@@ -1000,7 +1139,13 @@
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ================================================================
+     БЛОК 3: УСЛУГИ
+     Карточки услуг. Первая (flagship) — широкая, синяя.
+     Чтобы добавить услугу — скопируйте любой <div class="service-card">
+     и вставьте перед закрывающим </div> services-grid.
+     Чтобы изменить цену — отредактируйте текст в service-price / service-price-dark.
+     ================================================================ -->
 <section class="services" id="services">
   <div class="container">
     <div class="services-header">
@@ -1010,6 +1155,7 @@
     </div>
     <div class="services-grid">
 
+      <!-- Флагманская услуга — семейные споры (синяя, широкая карточка) -->
       <div class="service-card flagship">
         <div class="service-icon">👨‍👩‍👧</div>
         <div class="service-label">Флагманское направление</div>
@@ -1025,6 +1171,7 @@
         <span class="service-price">от 3 000 ₽</span>
       </div>
 
+      <!-- Жилищные споры -->
       <div class="service-card">
         <div class="service-icon">🏠</div>
         <div class="service-label">Недвижимость</div>
@@ -1033,6 +1180,7 @@
         <span class="service-price-dark">от 2 000 ₽</span>
       </div>
 
+      <!-- Трудовые споры -->
       <div class="service-card">
         <div class="service-icon">💼</div>
         <div class="service-label">Труд</div>
@@ -1041,6 +1189,7 @@
         <span class="service-price-dark">от 2 500 ₽</span>
       </div>
 
+      <!-- Составление документов -->
       <div class="service-card">
         <div class="service-icon">📋</div>
         <div class="service-label">Документы</div>
@@ -1049,6 +1198,7 @@
         <span class="service-price-dark">от 1 500 ₽</span>
       </div>
 
+      <!-- Представительство в суде -->
       <div class="service-card">
         <div class="service-icon">🏛️</div>
         <div class="service-label">Защита</div>
@@ -1057,6 +1207,7 @@
         <span class="service-price-dark">от 5 000 ₽</span>
       </div>
 
+      <!-- Социальное право и консультации -->
       <div class="service-card">
         <div class="service-icon">🤝</div>
         <div class="service-label">Право</div>
@@ -1069,7 +1220,10 @@
   </div>
 </section>
 
-<!-- HOW WE WORK -->
+<!-- ================================================================
+     БЛОК 4: ЭТАПЫ РАБОТЫ
+     4 шага. Чтобы изменить текст — отредактируйте step-title и step-text.
+     ================================================================ -->
 <section class="how" id="how">
   <div class="container">
     <div class="how-header">
@@ -1102,7 +1256,12 @@
   </div>
 </section>
 
-<!-- CASES -->
+<!-- ================================================================
+     БЛОК 5: КЕЙСЫ (истории клиентов)
+     Каждый кейс = case-card. Формат: ситуация → что сделано → результат.
+     Чтобы добавить кейс — скопируйте <div class="case-card">...</div>
+     Чтобы удалить — удалите весь блок case-card.
+     ================================================================ -->
 <section class="cases" id="cases">
   <div class="container">
     <div class="cases-header">
@@ -1112,6 +1271,7 @@
     </div>
     <div class="cases-grid">
 
+      <!-- Кейс 1: Раздел имущества -->
       <div class="case-card">
         <span class="case-tag">Раздел имущества</span>
         <div class="case-title">Супруг скрывал доходы при разделе квартиры и машины</div>
@@ -1128,6 +1288,7 @@
         </div>
       </div>
 
+      <!-- Кейс 2: Алименты -->
       <div class="case-card">
         <span class="case-tag">Алименты</span>
         <div class="case-title">Отец платил символические алименты при высокой неофициальной зарплате</div>
@@ -1144,6 +1305,7 @@
         </div>
       </div>
 
+      <!-- Кейс 3: Трудовой спор -->
       <div class="case-card">
         <span class="case-tag">Незаконное увольнение</span>
         <div class="case-title">Работодатель уволил сотрудника без оснований в период больничного</div>
@@ -1164,7 +1326,12 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- ================================================================
+     БЛОК 6: ЦЕНЫ
+     3 тарифа. Средний (.featured) выделен синим.
+     Чтобы изменить цену — отредактируйте текст в <div class="price-amount">
+     Чтобы изменить описание — отредактируйте <li> внутри price-list
+     ================================================================ -->
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="pricing-header">
@@ -1174,6 +1341,7 @@
     </div>
     <div class="pricing-grid">
 
+      <!-- Тариф 1: Консультация -->
       <div class="price-card">
         <div class="price-icon">💬</div>
         <div class="price-name">Консультация</div>
@@ -1187,6 +1355,7 @@
         <a href="#contact" class="price-btn">Записаться</a>
       </div>
 
+      <!-- Тариф 2: Ведение дела (ВЫДЕЛЕННЫЙ — синий фон) -->
       <div class="price-card featured">
         <div class="price-icon">⚖️</div>
         <div class="price-name">Ведение дела в суде</div>
@@ -1201,6 +1370,7 @@
         <a href="#contact" class="price-btn">Записаться</a>
       </div>
 
+      <!-- Тариф 3: Документы -->
       <div class="price-card">
         <div class="price-icon">📄</div>
         <div class="price-name">Составление документов</div>
@@ -1218,7 +1388,13 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ================================================================
+     БЛОК 7: КОНТАКТЫ И ФОРМА ЗАПИСИ
+     Слева — ссылки (WhatsApp, Telegram, ВК, телефон, адрес)
+     Справа — форма записи на консультацию
+     ВАЖНО: Замените все 79XXXXXXXXX на реальный номер!
+     ВАЖНО: Замените @polina1201 на реальные ники в соцсетях!
+     ================================================================ -->
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-grid">
@@ -1227,22 +1403,27 @@
         <h2 class="section-title">Готова ответить<br/>на ваш вопрос</h2>
         <p class="section-lead">Оставьте заявку — свяжусь в течение часа. Первичная беседа бесплатна.</p>
         <div class="contact-links">
+          <!-- WhatsApp — замените 79XXXXXXXXX на реальный номер -->
           <a href="https://wa.me/79XXXXXXXXX" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link-icon">📱</div>
             <span>WhatsApp — написать прямо сейчас</span>
           </a>
+          <!-- Telegram — замените polina1201 на реальный ник -->
           <a href="https://t.me/polina1201" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link-icon">✈️</div>
             <span>Telegram — @polina1201</span>
           </a>
+          <!-- ВКонтакте — замените polina1201 на реальный ник -->
           <a href="https://vk.com/polina1201" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link-icon">🔵</div>
             <span>ВКонтакте — @polina1201</span>
           </a>
+          <!-- Телефон — замените номер -->
           <a href="tel:+79XXXXXXXXX" class="contact-link">
             <div class="contact-link-icon">📞</div>
             <span>Позвонить: +7 (9XX) XXX-XX-XX</span>
           </a>
+          <!-- Адрес — измените при необходимости -->
           <div class="contact-link" style="cursor:default">
             <div class="contact-link-icon">📍</div>
             <span>Томск — приём очно и онлайн по всей России</span>
@@ -1250,6 +1431,7 @@
         </div>
       </div>
 
+      <!-- Форма записи на консультацию -->
       <div class="contact-form">
         <div class="form-title">Записаться на консультацию</div>
         <div class="form-sub">Оставьте номер — перезвоню в течение часа</div>
@@ -1262,6 +1444,7 @@
             <label>Телефон или Telegram</label>
             <input type="text" placeholder="+7 (___) ___-__-__" required />
           </div>
+          <!-- Выпадающий список тем — можно добавить/убрать option -->
           <div class="form-group">
             <label>Тема обращения</label>
             <select>
@@ -1282,6 +1465,7 @@
           <button type="submit" class="form-submit">Отправить заявку →</button>
           <div class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Вся информация строго конфиденциальна.</div>
         </form>
+        <!-- Это сообщение появляется после отправки формы -->
         <div class="form-success" id="formSuccess">
           <div class="form-success-icon">✅</div>
           <h3>Заявка отправлена!</h3>
@@ -1292,7 +1476,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================================================================
+     ПОДВАЛ (FOOTER)
+     Год, название, ссылки на соцсети.
+     ================================================================ -->
 <footer>
   <div>© 2025 Дударькова Полина — юрист по семейным и гражданским делам в Томске</div>
   <div style="margin-top:6px">
@@ -1301,13 +1488,23 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
+<!-- ================================================================
+     ПЛАВАЮЩАЯ КНОПКА WHATSAPP
+     Зелёный кружок в правом нижнем углу, всегда видна.
+     ВАЖНО: замените 79XXXXXXXXX на реальный номер!
+     ================================================================ -->
 <a href="https://wa.me/79XXXXXXXXX" class="float-btn" target="_blank" rel="noopener" title="Написать в WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
 
+<!-- ================================================================
+     JAVASCRIPT — обработка формы
+     Сейчас форма показывает сообщение "Заявка отправлена!" без реальной
+     отправки. Чтобы подключить реальную отправку — нужно добавить
+     бэкенд (например, через Formspree, Telegram-бота или свой сервер).
+     ================================================================ -->
 <script>
   function handleSubmit(e) {
     e.preventDefault();
@@ -1315,7 +1512,7 @@
     document.getElementById('formSuccess').classList.add('show');
   }
 
-  // Smooth nav highlight
+  // Подсветка активной секции в навигации при прокрутке
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const y = window.scrollY + 80;
